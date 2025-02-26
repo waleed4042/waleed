@@ -1,0 +1,9 @@
+first we need to import Flask class and render_template from flask module
+then make an instance of flask class with argument __name__ 
+then use the obj/instance method route and gave the desire path for pages
+then right after the route make function with different names and func. return
+render_template('index.html') which is within template folder in same directory to py
+file 
+we can use variable to give the value of variable within function to html file 
+within {{variablename=givenname}} in function
+after that you need to obj.run() and avoid running everytime use debug=True   

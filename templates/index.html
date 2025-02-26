@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+{% set fename='assets/img/home.jpg' %}     
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename=fename) }}');">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>{{param['main_heading']}}</h1>
+                            <p>we can Upload and delete a files</p>
+                            <span class="subheading">{{param['tag_line']}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    {% for post in posts %}
+                
+                    <div class="post-preview">
+                        <a href="post/{{post.slug}}">
+                            <h2 class="post-title">{{post.title}}</h2>
+                            <h3 class="post-subtitle">{{post.tagline}}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Admin</a>
+                            on {{post.date}}
+                            
+                   
+                    </div>
+                    <!-- Divider-->
+                    {{post.content[0:22]}}....
+                    <hr class="my-4" />
+                
+                    {% endfor %}
+                    <!-- Pager-->
+                  <a href="{{prev}}"><button class="btn btn-primary">&lAarr; Previous</button></a>
+                  <a href="{{next}}"><button class="btn btn-primary float-end"> Next &rAarr;</button></a>
+                </div>
+            </div>
+        </div>
+      
+{% endblock %}

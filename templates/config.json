@@ -1,0 +1,17 @@
+{
+    "params":{
+        "local_uri":"mysql://root:@localhost/coding_hub",
+        "server_uri":"mysql://root:@localhost/coding_hub",
+        "fb_url":"https://facebook.com",
+        "insta_url":"https://instagram.com/coding_hub",
+        "tw_url":"https://twitter.com/coding_hub",
+        "main_line":"Only for coders",
+        "main_heading":"Coding Blogs",
+        "tag_line":"learn programming from scratch",
+        "no_of_post":2,
+        "img_path":"img-solid.svg",
+        "Admin_name":"waleed",
+        "Admin_password":"waleed123",
+        "upload_location":"D:\\Flask series\\static"
+    }
+}
